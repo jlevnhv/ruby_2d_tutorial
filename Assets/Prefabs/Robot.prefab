@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -4460305309136408641}
   - component: {fileID: 2592478237729469392}
   - component: {fileID: -425678914357506010}
+  - component: {fileID: 6953573813786743705}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,3 +145,22 @@ MonoBehaviour:
   speed: 3
   vertical: 0
   changeTime: 3
+--- !u!95 &6953573813786743705
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886587874844963990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e514a46d77610541bb6f2eaba34009e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
