@@ -10,6 +10,7 @@ public class RubyController : MonoBehaviour
     public float timeInvincible = 2.0f;
     public int health {  get { return currentHealth;  } }
     public GameObject projectilePrefab;
+    public ParticleSystem hitEffect;
         
     int currentHealth;
     bool isInvincible;
@@ -65,6 +66,7 @@ public class RubyController : MonoBehaviour
     {
         if (amount < 0)
         {
+            Instantiate(hitEffect, rigidbody2d.position + Vector2.up * 0.7f, Quaternion.identity);
             if (isInvincible)
                 return;
 

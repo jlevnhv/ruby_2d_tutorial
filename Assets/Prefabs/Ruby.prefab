@@ -100,6 +100,8 @@ MonoBehaviour:
   timeInvincible: 2
   projectilePrefab: {fileID: 5691411405664735967, guid: 2606209f5860ea54481e77ca86ce7b72,
     type: 3}
+  hitEffect: {fileID: 4289962704879231085, guid: 4bfd0d4023ad79046acb28d27487ffe2,
+    type: 3}
 --- !u!50 &3595333601045343750
 Rigidbody2D:
   serializedVersion: 4
