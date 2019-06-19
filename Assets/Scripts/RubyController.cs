@@ -66,10 +66,10 @@ public class RubyController : MonoBehaviour
     {
         if (amount < 0)
         {
-            Instantiate(hitEffect, rigidbody2d.position + Vector2.up * 0.7f, Quaternion.identity);
             if (isInvincible)
                 return;
 
+            Instantiate(hitEffect, rigidbody2d.position, Quaternion.identity);
             isInvincible = true;
             invincibleTimer = timeInvincible;
         }
