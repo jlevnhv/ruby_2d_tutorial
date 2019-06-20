@@ -4877,3 +4877,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectionEffect: {fileID: 1368914710512211375, guid: eb92a515721f6f842bad6e149a2de2b5,
     type: 3}
+  collectedClip: {fileID: 8300000, guid: af5f8b64e3f58f24c87ff8f789b04f6c, type: 3}
