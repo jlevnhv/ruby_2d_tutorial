@@ -11,6 +11,8 @@ public class RubyController : MonoBehaviour
     public int health {  get { return currentHealth;  } }
     public GameObject projectilePrefab;
     public ParticleSystem hitEffect;
+    public AudioClip launchClip;
+    public AudioClip hitClip;
         
     int currentHealth;
     bool isInvincible;
@@ -18,9 +20,10 @@ public class RubyController : MonoBehaviour
 
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
-    AudioSource audioSource;
 
     Rigidbody2D rigidbody2d;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +89,7 @@ public class RubyController : MonoBehaviour
                 return;
 
             Instantiate(hitEffect, rigidbody2d.position, Quaternion.identity);
+            audioSource.PlayOneShot(hitClip);
             isInvincible = true;
             invincibleTimer = timeInvincible;
         }
@@ -101,6 +105,7 @@ public class RubyController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+        PlaySound(launchClip);
     }
 
     public void PlaySound(AudioClip clip)
